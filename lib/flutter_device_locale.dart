@@ -7,7 +7,7 @@ class FlutterDeviceLocale
 {
     static const MethodChannel _channel = const MethodChannel('flutter_device_locale');
 
-    static Future<Locale> getCurrentDeviceLocale() async
+    static Future<Locale> getCurrentLocale() async
     {
         final deviceLocales = await _getDeviceLocales();
 
