@@ -12,22 +12,22 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  String _deviceLocale = 'Unknown';
 
   @override
   void initState() {
     super.initState();
-    initPlatformState();
+    initDeviceLocale();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
+  Future<void> initDeviceLocale() async {
+    String deviceLocale;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await FlutterDeviceLocale.platformVersion;
+      deviceLocale = (await FlutterDeviceLocale.getCurrentDeviceLocale()).toString();
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      deviceLocale = 'Failed to get the device locale.';
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
+      _deviceLocale = deviceLocale;
     });
   }
 
@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Text('Current Locale: $_deviceLocale\n'),
         ),
       ),
     );
