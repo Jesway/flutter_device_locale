@@ -27,7 +27,7 @@ class FlutterDeviceLocale
 
         if (separator != null)
         {
-            var parts = code.split('_');
+            var parts = code.split(RegExp(separator));
 
             return Locale(parts[0], parts[1]);
         }
