@@ -34,7 +34,7 @@ import 'package:flutter_device_locale/flutter_device_locale.dart';
 Retrieve the current locale:
 
 ```dart
- Locale locale = await DeviceLocale.getCurrentLocale();
+Locale locale = await DeviceLocale.getCurrentLocale();
 ```
 
 Retrieve the preferred locales:
