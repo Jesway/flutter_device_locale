@@ -3,7 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/services.dart';
 
-class FlutterDeviceLocale
+class DeviceLocale
 {
     static const MethodChannel _channel = const MethodChannel('flutter_device_locale');
 

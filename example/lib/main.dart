@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     String deviceLocale;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      deviceLocale = (await FlutterDeviceLocale.getCurrentLocale()).toString();
+      deviceLocale = (await DeviceLocale.getCurrentLocale()).toString();
     } on PlatformException {
       deviceLocale = 'Failed to get the device locale.';
     }
