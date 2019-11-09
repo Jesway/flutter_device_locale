@@ -9,12 +9,12 @@ class FlutterDeviceLocale
 
     static Future<Locale> getCurrentLocale() async
     {
-        final deviceLocales = await _getDeviceLocales();
+        final deviceLocales = await getPreferredLocales();
 
         return _localeFromString(deviceLocales.first);
     }
 
-    static Future<List> _getDeviceLocales() async
+    static Future<List> getPreferredLocales() async
     {
       final List deviceLocales = await _channel.invokeMethod('deviceLocales');
 
