@@ -9,7 +9,7 @@ class DeviceLocale
 
     static Future<Locale> getCurrentLocale() async
     {
-        final deviceLocales = await getPreferredLocales();
+        final deviceLocales = await _getPreferredLocales();
 
         return _localeFromString(deviceLocales.first);
     }
@@ -18,7 +18,14 @@ class DeviceLocale
     {
       final List deviceLocales = await _channel.invokeMethod('deviceLocales');
 
-      return deviceLocales;
+      return deviceLocales.map((x) => _localeFromString(x)).toList();
+    }
+
+    static Future<List<String>> _getPreferredLocales() async
+    {
+        final List deviceLocales = await _channel.invokeMethod('deviceLocales');
+
+        return deviceLocales.cast<String>();
     }
 
     static Locale _localeFromString(String code)
