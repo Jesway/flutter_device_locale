@@ -14,7 +14,7 @@ Add this to your package's pubspec.yaml file:
 
 ```sh
 dependencies:
-  flutter_device_locale: ^0.2.0
+  flutter_device_locale: ^0.3.0
 ```
 
 Install packages from the command line (or from your editor):
@@ -34,11 +34,11 @@ import 'package:flutter_device_locale/flutter_device_locale.dart';
 Retrieve the current locale:
 
 ```dart
-var currentLocale = await FlutterDeviceLocale.getCurrentLocale();
+ Locale locale = await DeviceLocale.getCurrentLocale();
 ```
 
 Retrieve the preferred locales:
 
 ```dart
-var preferredLocales = await FlutterDeviceLocale.getPreferredLocales();
+List<Locale> preferredLocales = await DeviceLocale.getPreferredLocales();
 ```
