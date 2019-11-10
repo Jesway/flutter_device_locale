@@ -3,9 +3,6 @@ package io.leadcode.flutter_device_locale;
 import android.content.res.Resources;
 import android.os.LocaleList;
 
-
-import androidx.annotation.NonNull;
-
 import 	java.util.*;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -15,8 +12,6 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 public class FlutterDeviceLocalePlugin implements MethodCallHandler
 {
-
-
     public static void registerWith(Registrar registrar)
     {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_device_locale");
@@ -25,7 +20,7 @@ public class FlutterDeviceLocalePlugin implements MethodCallHandler
     }
 
     @Override
-    public void onMethodCall(MethodCall call, @NonNull Result result)
+    public void onMethodCall(MethodCall call, Result result)
     {
         if(call.method.equals("deviceLocales"))
         {

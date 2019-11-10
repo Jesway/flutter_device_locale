@@ -10,3 +10,6 @@
 
 - getPreferredLocales() now returns a List<Locale>
 
+## 0.3.1
+
+- Fixed possible exception with the NonNull annotation (Android)
