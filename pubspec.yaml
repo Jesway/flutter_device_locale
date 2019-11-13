@@ -1,6 +1,6 @@
 name: flutter_device_locale
 description: A Flutter plugin for retrieving the device locale information.
-version: 0.3.1
+version: 0.3.2
 author: Jesway <hello@jesway.com>
 homepage: https://github.com/jesway/flutter_device_locale
 
