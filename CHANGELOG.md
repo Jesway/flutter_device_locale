@@ -17,3 +17,7 @@
 ## 0.3.2
 
 - Updated license, readme, links
+
+## 0.3.3
+
+- Fixed an issue regarding the Android package naming

@@ -14,7 +14,7 @@ Add this to your package's pubspec.yaml file:
 
 ```sh
 dependencies:
-  flutter_device_locale: ^0.3.2
+  flutter_device_locale: ^0.3.3
 ```
 
 Install packages from the command line (or from your editor):
