@@ -1,6 +1,7 @@
 [<img src="https://raw.githubusercontent.com/jesway/flutter_device_locale/master/resources/flutter_device_locale.png" />](https://github.com/jesway/flutter_device_locale/)
 
 [![Build Status](https://travis-ci.org/jesway/flutter_device_locale.svg)](https://travis-ci.org/jesway/flutter_device_locale)
+[![pub package](https://img.shields.io/pub/v/flutter_device_locale.svg?color=important)](https://pub.dev/packages/flutter_device_locale)
 [![License: MIT](https://img.shields.io/badge/License-MIT-ff69b4.svg)](https://github.com/jesway/flutter_device_locale/blob/master/LICENSE)
 [![Flutter.io](https://img.shields.io/badge/Flutter-Website-deepskyblue.svg)](https://flutter.io/)
 
