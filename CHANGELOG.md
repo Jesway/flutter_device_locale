@@ -13,3 +13,7 @@
 ## 0.3.1
 
 - Fixed possible exception with the NonNull annotation (Android)
+
+## 0.3.2
+
+- Updated license, readme, links

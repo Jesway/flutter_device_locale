@@ -1,4 +1,4 @@
-group 'io.leadcode.flutter_device_locale'
+group 'com.jesway.flutter_device_locale'
 version '1.0'
 
 buildscript {

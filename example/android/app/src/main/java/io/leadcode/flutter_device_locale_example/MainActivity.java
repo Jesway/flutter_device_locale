@@ -1,4 +1,4 @@
-package io.leadcode.flutter_device_locale_example;
+package com.jesway.flutter_device_locale_example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

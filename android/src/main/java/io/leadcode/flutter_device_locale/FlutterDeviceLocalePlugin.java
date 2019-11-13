@@ -1,4 +1,4 @@
-package io.leadcode.flutter_device_locale;
+package com.jesway.flutter_device_locale;
 
 import android.content.res.Resources;
 import android.os.LocaleList;
