@@ -10,8 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-dev_dependencies:
-
   flutter_device_locale:
     path: ../
 
