@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A Flutter plugin for retrieving the device locale information.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/bratan/flutter_device_locale'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Florin Bratan' => 'florin@leadcode.dev' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
