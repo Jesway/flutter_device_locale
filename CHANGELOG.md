@@ -21,3 +21,8 @@
 ## 0.3.3
 
 - Fixed an issue regarding the Android package naming
+
+## 0.4.0
+
+- Added support for Flutter Web
+
