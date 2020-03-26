@@ -7,7 +7,7 @@ abstract class FlutterDeviceLocalePlatform extends PlatformInterface {
   static final Object _token = Object();
 
   static FlutterDeviceLocalePlatform _instance =
-      MethodChannelUrlFlutterDeviceLocale();
+      FlutterDeviceLocaleMethodChannelPlugin();
 
   static FlutterDeviceLocalePlatform get instance => _instance;
 
