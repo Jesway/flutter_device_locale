@@ -6,7 +6,8 @@ const MethodChannel _channel = MethodChannel('flutter_device_locale');
 
 class MethodChannelUrlFlutterDeviceLocale extends FlutterDeviceLocalePlatform {
   @override
-  Future<List<String>> deviceLocales() {
-    return _channel.invokeMethod<void>('deviceLocales');
+  Future<List<String>> deviceLocales() async {
+    final List<dynamic> result = await _channel.invokeMethod('deviceLocales');
+    return result.cast<String>();
   }
 }
