@@ -12,7 +12,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _deviceLocale = 'Unknown';
+  String _deviceLocale = 'Not loaded yet';
+  String _preferredLocales = 'Not loaded yet';
 
   @override
   void initState() {
@@ -22,10 +23,12 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initDeviceLocale() async {
-    String deviceLocale;
+    String deviceLocale = 'Unkown';
+    String preferredLocales = 'Unkown';
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       deviceLocale = (await DeviceLocale.getCurrentLocale()).toString();
+      preferredLocales = (await DeviceLocale.getPreferredLocales()).join(", ");
     } on PlatformException {
       deviceLocale = 'Failed to get the device locale.';
     }
@@ -37,6 +40,7 @@ class _MyAppState extends State<MyApp> {
 
     setState(() {
       _deviceLocale = deviceLocale;
+      _preferredLocales = preferredLocales;
     });
   }
 
@@ -48,7 +52,8 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Current Locale: $_deviceLocale\n'),
+          child: Text(
+              'Current Locale: $_deviceLocale\n\nPreferred Locales: $_preferredLocales'),
         ),
       ),
     );
