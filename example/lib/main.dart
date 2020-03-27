@@ -12,8 +12,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _deviceLocale = 'Not loaded yet';
-  String _preferredLocales = 'Not loaded yet';
+  String _deviceLocale = 'Not loaded';
+  String _preferredLocales = 'Not loaded';
 
   @override
   void initState() {
@@ -23,8 +23,8 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initDeviceLocale() async {
-    String deviceLocale = 'Unkown';
-    String preferredLocales = 'Unkown';
+    String deviceLocale = 'Unknown';
+    String preferredLocales = 'Unknown';
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       deviceLocale = (await DeviceLocale.getCurrentLocale()).toString();
