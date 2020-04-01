@@ -3,20 +3,41 @@ package dev.leadcode.flutter_device_locale;
 import android.content.res.Resources;
 import android.os.LocaleList;
 
+import androidx.annotation.NonNull;
+
 import 	java.util.*;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-public class FlutterDeviceLocalePlugin implements MethodCallHandler
+public class FlutterDeviceLocalePlugin implements FlutterPlugin, MethodCallHandler
 {
+    private MethodChannel channel;
+
+    @Override
+    public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+        register(flutterPluginBinding.getBinaryMessenger());
+    }
+
+    @Override
+    public void onDetachedFromEngine(FlutterPluginBinding binding) {
+        channel.setMethodCallHandler(null);
+    }
+
     public static void registerWith(Registrar registrar)
     {
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_device_locale");
+        FlutterDeviceLocalePlugin instance = new FlutterDeviceLocalePlugin();
+        instance.register(registrar.messenger());
+    }
 
-        channel.setMethodCallHandler(new FlutterDeviceLocalePlugin());
+    private void register(BinaryMessenger binaryMessenger) {
+        channel = new MethodChannel(binaryMessenger, "flutter_device_locale");
+        channel.setMethodCallHandler(this);
     }
 
     @Override
