@@ -1,4 +1,10 @@
 import 'dart:async';
+
+// TODO
+// Since Flutter Web is currently not available in the stable branch, the
+// Travis Build Job fails. Therefore we ignore the error until Flutter Web
+// becomes stable eventually
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
