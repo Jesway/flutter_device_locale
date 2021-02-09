@@ -26,3 +26,7 @@
 
 - Added support for Flutter Web
 
+## 0.5.0-nullsafety.0
+
+- Move to null safety
+

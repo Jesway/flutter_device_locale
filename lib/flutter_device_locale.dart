@@ -17,7 +17,11 @@ class DeviceLocale {
   }
 
   static Locale _localeFromString(String code) {
-    var separator = code.contains('_') ? '_' : code.contains('-') ? '-' : null;
+    var separator = code.contains('_')
+        ? '_'
+        : code.contains('-')
+            ? '-'
+            : null;
 
     if (separator != null) {
       var parts = code.split(RegExp(separator));
