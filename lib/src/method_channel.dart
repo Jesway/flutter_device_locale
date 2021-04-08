@@ -9,7 +9,7 @@ class FlutterDeviceLocaleMethodChannelPlugin
   @override
   Future<List<String>> deviceLocales() async {
     final result =
-        await (_channel.invokeMethod('deviceLocales') as Future<List<dynamic>>);
+        (await _channel.invokeMethod('deviceLocales') as List<dynamic>);
     return result.cast<String>();
   }
 }
