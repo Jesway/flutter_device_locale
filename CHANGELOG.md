@@ -26,3 +26,10 @@
 
 - Added support for Flutter Web
 
+## 1.0.0
+
+- Null safety support
+
+## 1.1.0
+
+- Added Linux support
