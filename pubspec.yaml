@@ -27,3 +27,5 @@ flutter:
       web:
         pluginClass: FlutterDeviceLocaleWebPlugin
         fileName: src/web.dart
+      linux:
+        pluginClass: FlutterDeviceLocalePlugin

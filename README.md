@@ -44,6 +44,10 @@ Retrieve the preferred locales:
 List<Locale> preferredLocales = await DeviceLocale.getPreferredLocales();
 ```
 
+### Note for Linux
+
+Since GNU/Linux and POSIX doesn't provide a standard API for getting the preferred languages, `DeviceLocale.getPreferredLocales` always returns the current locale.
+
 ## Issues
 Please file any issues, bugs or feature request [here](https://github.com/bratan/flutter_device_locale/issues).
 
@@ -53,4 +57,3 @@ This project is licensed under the [MIT License](https://github.com/bratan/flutt
 
 ## Author
 This Flutter plugin is developed by [Florin Bratan](https://github.com/bratan). You can contact me at <florin@leadcode.dev>
-
